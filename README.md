@@ -1,6 +1,6 @@
 # Ride Buds — Interactive Demo
 
-**Live demo: [ridebuds-demo.vercel.app](ridebuds-demo.vercel.app)**
+**Live demo: [https://ridebuds-demo.vercel.app](https://ridebuds-demo.vercel.app)**
 
 Ride Buds is a progressive web app for group motorcycle rallies in the Indian Himalayas, built solo for the Tank Up Kaza ride (Delhi → Kaza through Kinnaur). A crew joins with a shared ride code — no accounts — and gets a live map of each other's check-ins, community-flagged hazards, verified fuel stops, a pace-aware itinerary planner, group chat, and a QR-shareable emergency card. This repo is a fully clickable, zero-backend demo of the production app.
 
