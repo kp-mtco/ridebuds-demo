@@ -1,0 +1,71 @@
+html, body { margin: 0; padding: 0; background: #f4e9d0; }
+:root {
+  --cream:#f4e9d0; --cream-soft:#faf3e1; --ink:#1b2a4a; --ink-soft:#2e3e62;
+  --orange:#e8602a; --orange-soft:#f08654; --teal:#2e8a8a; --teal-soft:#4ba6a6;
+  --brown:#8b5a2b; --warning:#d4471f;
+}
+.rb-root {
+  background: var(--cream); color: var(--ink);
+  font-family: 'DM Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh; position: relative;
+}
+.rb-root::after {
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:0; opacity:0.06;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.55  0 0 0 0 0.35  0 0 0 0 0.17  0 0 0 0.6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+.above-grain { position:relative; z-index:1; }
+.display { font-family:'Bungee Shade', system-ui, sans-serif; letter-spacing:0.02em; line-height:1; }
+.handwritten { font-family:'Caveat', cursive; }
+.card-paper { background:var(--cream-soft); border:2px solid var(--ink); box-shadow:4px 4px 0 var(--ink); border-radius:14px; }
+.btn-primary {
+  background:var(--orange); color:var(--cream-soft); border:2px solid var(--ink);
+  box-shadow:3px 3px 0 var(--ink); border-radius:10px; padding:14px 20px;
+  font-weight:700; letter-spacing:0.03em; text-transform:uppercase; font-size:0.95rem;
+  transition:transform 80ms ease, box-shadow 80ms ease; cursor:pointer; font-family:inherit;
+}
+.btn-primary:hover { transform:translate(-1px,-1px); box-shadow:4px 4px 0 var(--ink); }
+.btn-primary:active { transform:translate(2px,2px); box-shadow:1px 1px 0 var(--ink); }
+.btn-primary:disabled { opacity:0.5; cursor:not-allowed; }
+.input-paper {
+  background:var(--cream-soft); color:var(--ink); border:2px solid var(--ink); border-radius:10px;
+  padding:14px 16px; font-size:1rem; font-family:inherit; outline:none;
+  box-shadow:inset 2px 2px 0 rgba(27,42,74,0.08); width:100%; box-sizing:border-box;
+}
+.input-paper:focus { border-color:var(--orange); box-shadow:0 0 0 3px rgba(232,96,42,0.25); }
+.field-label {
+  display:block; font-size:0.85rem; font-weight:600; letter-spacing:0.05em;
+  text-transform:uppercase; color:var(--ink-soft); margin-bottom:6px;
+}
+.rb-chip {
+  display:inline-flex; align-items:center; gap:6px; padding:6px 12px; font-size:12px;
+  font-weight:600; text-transform:uppercase; letter-spacing:0.04em; border-radius:999px;
+  border:2px solid var(--ink); box-shadow:2px 2px 0 var(--ink); cursor:pointer; font-family:inherit;
+  transition:transform 60ms ease;
+}
+.rb-chip:active { transform:translateY(2px); }
+.rb-nav-btn {
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  padding:10px 0 8px; gap:2px; width:100%; background:none; border:none; cursor:pointer;
+  font-family:inherit; transition:transform 60ms ease;
+}
+.rb-nav-btn:active { transform:translateY(2px); }
+.leaflet-container { font-family:'DM Sans', system-ui, sans-serif; background:#e8ddc4; }
+.leaflet-popup-content-wrapper {
+  background:var(--cream-soft); color:var(--ink); border:2px solid var(--ink);
+  border-radius:12px; box-shadow:3px 3px 0 var(--ink);
+}
+.leaflet-popup-tip { background:var(--cream-soft); border:2px solid var(--ink); }
+.leaflet-popup-content { margin:10px 12px; font-family:'DM Sans', system-ui, sans-serif; }
+.rb-cluster {
+  display:flex; align-items:center; justify-content:center; width:40px; height:40px;
+  border-radius:50%; background:#1B2A4A; color:#F4E9D0; border:2px solid #F4E9D0;
+  box-shadow:0 2px 6px rgba(0,0,0,0.25); font-weight:700; font-size:13px; font-family:system-ui;
+}
+.rb-pop-btn {
+  font-size:11px; font-weight:600; padding:6px 10px; border-radius:6px; text-decoration:none;
+  display:inline-flex; align-items:center; gap:4px; border:none; cursor:pointer; font-family:inherit;
+}
+@keyframes rb-toast-in { from { opacity:0; transform:translate(-50%,8px);} to { opacity:1; transform:translate(-50%,0);} }
+@keyframes rb-fade-in { from { opacity:0; transform:translateY(6px);} to { opacity:1; transform:translateY(0);} }
+.rb-fade { animation: rb-fade-in 240ms ease both; }
